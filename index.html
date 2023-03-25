@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="calculator">
+        <h1>زکوٰۃ کیلکو لیٹر
+
+        </h1>
+        <div class="container">
+            <div class="twoTables">
+
+                <div>
+                    <table>
+                        <!-- Table Heading -->
+                        <tr>
+                            <th class="maaliat">Maaliat</th>
+                            <th class="zakat-assase">Zakat-e-Raqam Se Munha</th>
+                            <th class="serial-number">S.no#</th>
+                        </tr>
+                        <!-- Table Data -->
+                        <tr>
+                            <td><input id="input-t1" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                            <td class="zakat-assase">Qarz Le Hue Raqam</td>
+                            <td class="serial-number">1</td>
+                        </tr>
+                        <tr>
+                            <td><input id="input-t2" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                            <td class="zakat-assase">Mahr-e-Moujal</td>
+                            <td class="serial-number">2</td>
+                        </tr>
+                        <tr>
+                            <td><input id="input-t3" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                            <td class="zakat-assase">B.C</td>
+                            <td class="serial-number">3</td>
+                        </tr>
+                        <tr>
+                            <td><input id="input-t4" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                            <td class="zakat-assase">Utility Bills</td>
+                            <td class="serial-number">4</td>
+                        </tr>
+                        <tr>
+                            <td><input id="input-t5" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                            <td class="zakat-assase">Borrowing Amount From Parties</td>
+                            <td class="serial-number">5</td>
+                        </tr>
+                        <tr>
+                            <td><input id="input-t6" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                            <td class="zakat-assase">Employess Salary</td>
+                            <td class="serial-number">6</td>
+                        </tr>
+                        <tr>
+                            <td><input id="input-t7" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                            <td class="zakat-assase">Previous Zakat</td>
+                            <td class="serial-number">7</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="display-total-table-2"><p class="output-table-2" id="outputTable2"></p></div>
+                            </td>
+                            <td class="zakat-assase">Total Amount</td>
+                            <td class="serial-number"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="twoTables">
+                    <table>
+                        <!-- Table Heading -->
+                        <tr>
+                            <th class="maaliat">Zakaat Amount</th>
+                            <th class="zakat-assase">Description of Total Amount</th>
+                        </tr>
+                        <!-- Table Data -->
+                        <tr>
+                            <td>
+                                <div id="display-total-table-1"><p class="output-table-1" id="outputTable11"></p></div>
+                            </td>
+                            <td class="zakat-assase">Qul qabil-e-zakat assase</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="display-total-table-2"><p class="output-table-2" id="outputTable22"></p></div>
+                            </td>
+                            <td class="zakat-assase">Zakat se munha hony waly assase</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="display-total-table-1"><p class="output-table-1" id="outputZakatAmount"></p></div>
+                            </td>
+                            <td class="zakat-assase">Qul qabil-e-zakat </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Buttons Starts Here -->
+                <div class="btn">
+                    <button id="calculate-btn" class="calculator-btn btn-style" onclick="calculate()"> Calculate </button>
+                    <button id="pdf-btn" class="download-btn btn-style"> Download PDF </button>
+                </div>
+                <!-- Buttons Ends Here -->
+            </div>
+            <div class="single-table">
+
+                <table>
+                    <!-- Table Heading -->
+                    <tr>
+                        <th class="maaliat">Maaliat</th>
+                        <th class="zakat-assase">Qabil-e-Zakaat Assase</th>
+                        <th class="serial-number">S.no#</th>
+                    </tr>
+                    <!-- Table Data -->
+                    <tr>
+                        <td><input id="input-value-1" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Mojuda Sona</td>
+                        <td class="serial-number">1</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-2" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Mojuda Chandi</td>
+                        <td class="serial-number">2</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-3" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Selling House</td>
+                        <td class="serial-number">3</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-4" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Bank Balance</td>
+                        <td class="serial-number">4</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-5" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Borrowing Amount</td>
+                        <td class="serial-number">5</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-6" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Current Currency</td>
+                        <td class="serial-number">6</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-7" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Bonds</td>
+                        <td class="serial-number">7</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-8" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Shares</td>
+                        <td class="serial-number">8</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-9" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Invesment Funds</td>
+                        <td class="serial-number">9</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-10" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Private Funds</td>
+                        <td class="serial-number">10</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-11" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Saving certificate (NIT)</td>
+                        <td class="serial-number">11</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-12" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Bachat Certificate (NDFC)</td>
+                        <td class="serial-number">12</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-13" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Bachat certificate (FEBC)</td>
+                        <td class="serial-number">13</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-14" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">B.C (Commity)</td>
+                        <td class="serial-number">14</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-15" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Mandate</td>
+                        <td class="serial-number">15</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-16" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Bussiness Amount</td>
+                        <td class="serial-number">16</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-17" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Stock Available in Bussiness Amount</td>
+                        <td class="serial-number">17</td>
+                    </tr>
+                    <tr>
+                        <td><input id="input-value-18" class="input-feild" type="number" placeholder="Enter Amount" value="0"></td>
+                        <td class="zakat-assase">Mushtarka Karobaar ky Assase</td>
+                        <td class="serial-number">18</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="display-total-table-1"><p class="output-table-1" id="outputTable1"></p></div>
+                        </td>
+                        <td class="zakat-assase">Total Amount</td>
+                        <td class="serial-number"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"
+    integrity="sha512-vNrhFyg0jANLJzCuvgtlfTuPR21gf5Uq1uuSs/EcBfVOz6oAHmjqfyPoB5rc9iWGSnVE41iuQU4jmpXMyhBrsw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</html>

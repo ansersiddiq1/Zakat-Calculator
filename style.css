@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  vertical-align: middle;
+  font-family: 'Poppins', sans-serif;
+}
+/* For webkit based browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey; 
+}
+h1 {
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  vertical-align: middle;
+  width: -webkit-fill-available;
+}
+.single-table{
+  width: 100%;
+}
+.twoTables{
+  width: 100%;
+}
+#calculator{
+  display: flex;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .container div {
+  margin: 0.5vw;
+} */
+
+table,
+th,
+td {
+  border: 1px solid black;
+  width: auto;
+}
+
+table {
+  width: -webkit-fill-available;
+  margin: 10px 5px 10px 5px;
+}
+
+.serial-number {
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  text-align: center;
+}
+
+.zakat-assase {
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  text-align: right;
+}
+
+input[type="number" i] {
+  padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+  text-align: center;
+  font-size: 1vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.input-feild {
+  border: 0px transparent;
+}
+
+.maaliat {
+  text-align: center;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px 10px 5px;
+}
+.calculator-btn{
+  padding: 2% 15%;
+  font-size: 16px;
+  margin: 2px;
+  width: fit-content;
+  border: 2px solid black;
+  border-radius: 50px;
+  transition: 0.5s;
+  background-color: #fff;
+  cursor: pointer;
+}
+.calculator-btn:hover{
+  border-color: black;
+  background-color: black;
+  color: #fff;
+}
+.download-btn{
+  padding: 2% 18%;
+  font-size: 16px;
+  padding: 2% 15%;
+  font-size: 16px;
+  margin: 2px;
+  width: fit-content;
+  border: 2px solid black;
+  border-radius: 50px;
+  transition: 0.5s;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+.download-btn:hover{
+    border-color: black;
+    background-color: #fff;
+    color: black;
+}
+.output-table-2{
+  font-size: 1VW;
+  text-align: center;
+}
+.output-table-1{
+  font-size: 1VW;
+  text-align: center;
+}
+@media only screen and (max-width: 1017px) and (min-width: 425px)  {
+  .container{
+    flex-direction: column-reverse;
+  }
+  input[type="number" i]{
+    font-size: 14px;
+    padding: 0px;
+    text-align: center;
+  }
+  .zakat-assase{
+    font-size: 16px;
+  }
+  input.input-feild{
+    width: 100px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  .btn{
+    flex-direction: column;
+  }
+  .calculator-btn{
+    padding: 2% 40%;
+    font-size: 14px;
+  }
+  .download-btn{
+    padding: 3% 35%;
+    font-size: 14px;
+  }
+
+}
+@media only screen and (max-width: 425px) and (min-width: 375px)  {
+  .container{
+    flex-direction: column-reverse;
+    width: 373px;
+  }
+  input[type="number" i]{
+    font-size: 12px;
+    padding: 0px;
+    text-align: center;
+  }
+  .zakat-assase{
+    font-size: 14px;
+  }
+  input.input-feild{
+    width: 80px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  .btn{
+    flex-direction: column;
+  }
+  .calculator-btn{
+    padding: 2% 40%;
+    font-size: 14px;
+  }
+  .download-btn{
+    padding: 3% 35%;
+    font-size: 14px;
+  }
+  
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) 
+{
+  .calculator-btn {
+    padding: 2% 42%;
+    font-size: 14px;
+}
+.download-btn {
+  padding: 3% 39%;
+  font-size: 14px;
+}
+}
